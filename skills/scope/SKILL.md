@@ -38,7 +38,7 @@ Follow `../../shared/ground-rules.md`. Scoping is read-only against the repo. Th
 
 1. **Ranges, not points.** Every item has best, likely and worst. A single number hides the risk the client is paying us to carry.
 2. **Unknowns are priced or removed.** Each unknown becomes one of: a question for the client, a paid discovery spike, a stated assumption, a contingency line, or an exclusion. None may stay silent.
-3. **Rates come from the rate card.** Find it at run time ([rate-card lookup](references/rate-card-lookup.md)): the Lilly Logic Labs price list and services playbook when the company folder is present, else ask the owner. Never invent a price, a discount or a payment term. Quote the figures you read for this client only; do not keep them in notes that outlive the quote, because the rate card changes.
+3. **Rates come from the rate card.** Find it at run time ([rate-card lookup](references/rate-card-lookup.md)): the owner's price list and services playbook when the workspace has them, else ask the owner. Never invent a price, a discount or a payment term. Quote the figures you read for this client only; do not keep them in notes that outlive the quote, because the rate card changes.
 4. **Terms come from the playbook and the contract.** Payment split, revision limits, change-request rule, delays, ownership and warranty are read from the company playbook or the owner. Legal wording is the lawyer's template; this skill points at it.
 5. **No promises about outcomes we do not control**: rankings, followers, sales, store approval dates, third-party uptime.
 6. **Our client's data is theirs.** Do not paste client material into tools the client has not approved.

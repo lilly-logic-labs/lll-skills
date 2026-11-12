@@ -2,24 +2,25 @@
 
 Prices, delivery times, revision limits and terms change. Read them at run time, every time, from the owner's own files. Do not copy figures into this skill, into reusable notes or into a later quote without re-reading the source.
 
-## 1. Find the Lilly Logic Labs company folder
+## 1. Find the owner's rate card
 
-The company folder sits beside the product repos in the workspace. From the current directory look at `.`, `..`, `../..` and `../../..` for a folder named `company` that holds `docs/lll-price-list.html`:
+1. Read the workspace and project `CLAUDE.md` (and `AGENTS.md`). If they name a rate card, price list, client playbook or services playbook, use those paths.
+2. Otherwise look in `.`, `..`, `../..` and `../../..` for a business folder (`company/`, `business/`, `docs/business/`, `docs/pricing/`) and list its files:
 
 ```
-for d in . .. ../.. ../../..; do test -f "$d/company/docs/lll-price-list.html" && echo "$d/company"; done
+for d in . .. ../.. ../../..; do for f in company business docs/business docs/pricing; do test -d "$d/$f" && echo "$d/$f"; done; done
 ```
 
-Also check the workspace `CLAUDE.md` for the path. If nothing is found, you are outside the workspace: go to section 5.
+3. If nothing is found, go to section 5.
 
 ## 2. What to read (read only; never edit these files)
 
-| Source | What it holds | How to read |
-|---|---|---|
-| `company/docs/lll-price-list.html` | the service catalogue: service name, what is included, "from" price (and the dollar price), delivery time, care plans, bundles, how a project runs | strip styles and tags first (command below the table) |
-| `company/docs/services-playbook/` | one folder per service: a delivery checklist and a client sheet, plus the source lists (`content.py` holds the text of every checklist and the service list in plain Python data; prefer it to the PDFs) | read `content.py`; for the PDFs use `anthropic-skills:pdf` |
-| `company/docs/lll-client-playbook.html` | how every project runs: steps and time limits, communication, revisions, payment split, late payment, cancellation, the contract, delays, ownership of accounts and work | same command |
-| `company/docs/lll-price-research.md` | why the prices are what they are; background only | Read |
+| Source | What it usually holds |
+|---|---|
+| Price list or rate card | service lines, what each includes, "from" prices and currency, delivery times, care plans, bundles |
+| Services playbook | per-service delivery checklists and client sheets (what the client must provide) |
+| Client playbook or terms | project steps and time limits, communication, revisions, payment split, late payment, cancellation, delays, ownership |
+| Price research | why the prices are what they are; background only |
 
 Strip an HTML file to plain text (styles and tags removed):
 
@@ -60,7 +61,7 @@ If the rate card does not state a field the proposal needs (for example the revi
 5. Use the service's playbook checklist as the starting list of deliverables and its client sheet as the "what we need from you" list.
 6. Add the care plan as an option, not a default, unless the owner says it is included.
 
-## 5. No company folder: ask for a rate card
+## 5. No rate card found: ask for one
 
 Do not invent one. Ask the owner, in one batch:
 

@@ -53,7 +53,7 @@ Per-skill sources
   docs: docs-and-memory sync method from an internal LLL audit skill (ours; generic method only, no repo facts)
   handover: Context7 documentation lookup step (current docs for tool versions and support dates) adapted from ECC documentation-lookup (MIT)
   handover: deploy strategies (rolling, blue-green, canary), rollback checklist, production-readiness checklist structure, health-check and fail-fast config validation guidance adapted from ECC deployment-patterns (MIT)
-  handover: ownership, payment-gate, bug-window and handover topics read from company/docs/lll-client-playbook.html (ours, read only); the skill tells the model to read terms at runtime and copies none
+  handover: ownership, payment-gate, bug-window and handover topics read from the internal LLL client playbook (ours, read only); the skill tells the model to read terms at runtime and copies none
   launch: canary alert rules, baseline capture and two-consecutive-rounds confirmation, and the verify-the-deploy-by-revision idea adapted from gstack canary and land-and-deploy (MIT)
   launch: post-launch audit checklist structure adapted from company post-launch skill (ours; generic method only, no names or business facts)
   lll:design-system: adapted ideas from the Apache-2.0 impeccable skill (theming, extract, tokens, voice) and the gstack design-consultation and design-shotgun skills (consultation and variants flow, inspiration only); rewritten and stack-neutral.
@@ -81,7 +81,7 @@ Per-skill sources
   research: references/scraping.md look-then-extract method, 3-4 attempt budget, stable JSON output and untrusted-page-content rule adapted from gstack scrape (MIT)
   scope: idea of a reviewable page for plan approval (offer a private page for owner review) taken from ECC plan-canvas (MIT, idea only; no code or text copied)
   scope: plan-mutation operations (split, insert, skip, reorder, abandon) with audit trail, self-contained milestone briefs and adversarial review gate adapted from ECC blueprint (MIT)
-  scope: tone, process and payment/revision/ownership topics read from company/docs/lll-client-playbook.html (ours, read only); no text or figures copied into the skill
+  scope: tone, process and payment/revision/ownership topics read from the internal LLL client playbook (ours, read only); no text or figures copied into the skill
   security: caveman verify-and-stop used as inspiration only; no text copied
   security: engine wrapper, modes and verdict/severity mapping built around the vendored Cloudflare security-audit-skill engine (MIT)
   security: framework-notes adapted from ECC django-security, laravel-security, springboot-security and quarkus-security (MIT)
