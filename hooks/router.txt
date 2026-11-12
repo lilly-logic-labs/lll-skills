@@ -1,0 +1,28 @@
+LLL skill map:
+- lll:ai: the user says chatbot, AI feature, prompt, RAG, agent, eval, hallucination, token cost
+- lll:analytics: asked to track, measure, add analytics, fix numbers or explain traffic
+- lll:audit: asked to audit, check db health, scan deps, find dead code, a11y audit, find everything wrong
+- lll:backup-drill: asked to test backups, restore drill, disaster recovery, can we recover the database, is our backup real, D...
+- lll:build: asked to build, implement, execute the plan, add a feature, refactor or migrate
+- lll:business: asked if an idea is worth building, market size, competitors, pitch or investors
+- lll:cloudflare: the user says Cloudflare, Worker, wrangler, D1, R2
+- lll:debug: something is broken, intermittent, slow or down, or a fix did not work
+- lll:design-system: asked for brand colours/fonts/vibe, dark mode tokens, a system pulled from an existing app, or 3 directions
+- lll:docs: docs are stale, update the docs, sync README, docs out of date, after merging a change
+- lll:handover: handing over, transferring ownership or wrapping up a client project
+- lll:launch: about to launch, we're live, go-live checklist, is the site ready, emails go to spam, DNS cutover, day 7 check
+- lll:logo: asked for a logo, wordmark, monogram, symbol, app icon, favicon, or a logo critique or refresh
+- lll:marketing: asked for a marketing plan, what to post, captions, a launch campaign or brand voice
+- lll:mobile: the user says app, APK, IPA, Expo, Play Store, App Store
+- lll:onboard: taking over a client repo, joining a project, or asked to explain this repo, walk through the code, or wher...
+- lll:pack: asked to add a skill, fix a skill that did not fire, which skills do I use, check the pack, release the pack
+- lll:plan: asked to brainstorm, spec, design a feature, "how should we build X", "write the plan", "poke holes in this...
+- lll:pricing: asked what to charge, if prices are too low, or about plans and free tier
+- lll:research: the user says look up, research, read this link, check the GitHub issues or releases, is it fixed yet, what...
+- lll:review: asked to review, check my PR, look over this change, or reply to feedback
+- lll:scope: asked to quote, estimate, size a job, write a proposal or SOW, or say how long or how much
+- lll:security: asked is this secure, check auth, IDOR, injection, XSS, SSRF, leaked secrets, tenant isolation, OWASP, secu...
+- lll:seo: asked about SEO, rankings, indexing, Search Console, schema or why a page is not ranking
+- lll:ship: about to say done, fixed or passing, or asked to commit, make a PR, merge, set up a worktree, release, depl...
+- lll:tokens: asked about token use, context bloat, cost, running out of context, Claude is slow, optimize my setup
+- lll:ui: asked to "make this look better", "review the UI/UX", "polish", "feels janky", add loading/empty/error stat...

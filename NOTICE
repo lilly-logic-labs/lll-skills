@@ -1,0 +1,108 @@
+lll skill pack
+Copyright (c) 2026 Lilly Logic Labs. Licensed under the MIT License (see LICENSE), except the third-party material listed below, which keeps its own licence.
+
+Third-party material
+====================
+
+Cloudflare security-audit-skill
+  Source:   https://github.com/cloudflare/security-audit-skill @ c1c8a8c
+  Licence:  MIT (skills/security/engine/LICENSE)
+  Used in:  skills/security/engine/ (vendored; SKILL.md renamed ENGINE.md and self-references updated; test files removed)
+            shared/findings.md (verdict model)
+            CONTRACT.md (guidance and full modes, agent-neutral terms)
+
+Cloudflare skills
+  Source:   https://github.com/cloudflare/skills @ 1f2cd0a
+  Licence:  Apache-2.0 (skills/cloudflare/vendor/LICENSE)
+  Used in:  skills/cloudflare/vendor/ (vendored; each SKILL.md renamed GUIDE.md)
+
+ECC (formerly everything-claude-code) by Affaan Mustafa
+  Source:   https://github.com/affaan-m/ECC
+  Licence:  MIT
+  Used in:  hooks/excuse-check.mjs (idea from delivery-gate)
+            CONTRACT.md (host-neutral frontmatter rules from skill-host-compat)
+            further adaptations are listed per skill below
+
+Ideas or text adapted per skill are listed below by the builder of each skill.
+Sources without a licence (or not MIT / Apache-2.0) were used as inspiration only and no text was copied.
+
+Per-skill sources
+=================
+  analytics: decision-log template (patterns over events, failures first, search before write, 'next time I will') adapted from ECC growth-log (MIT)
+  analytics: decisions-first prioritisation (ICE scoring, hypothesis and decision rule) adapted from ECC product-lens (MIT)
+  analytics: operating-questions-first dashboard method (panel spec, layout bands, alerts) adapted from ECC dashboard-builder (MIT)
+  analytics: Search Console and GA4 reading method, MCP tool usage and owner-action split adapted from claude-seo seo-google (MIT)
+  audit: caveman verify-and-stop used as inspiration only; no text copied
+  audit: lens-a11y adapted from ECC accessibility and frontend-a11y (MIT)
+  audit: lens-agent-config MCP selector classification adapted from ECC mcp-dependency-review (MIT); trust-boundary checks from ECC agent-security-hardening (MIT); scan targets from ECC security-scan (MIT); permission and hook hygiene from ECC config-gc (MIT)
+  audit: lens-bugs click-path method adapted from ECC click-path-audit, error-handling and ai-regression-testing (MIT)
+  audit: lens-cleanup cut-list tags and deferral ledger adapted from ponytail-audit and ponytail-debt (MIT); extraction rule from gstack deslop-shared-libs (MIT); detectors from ECC plankton-code-quality and codehealth-mcp (MIT)
+  audit: lens-db adapted from ECC postgres-patterns, mysql-patterns, redis-patterns and database-migrations (MIT)
+  audit: lens-migration adapted from ECC database-migrations (MIT)
+  audit: lens-perf thresholds and method adapted from Cloudflare web-perf skill (Apache-2.0) and gstack benchmark (MIT)
+  audit: lens-release adapted from ECC production-audit and change-impact (MIT)
+  audit: lens-tests hollow-test catalogue adapted from gstack test-audit (MIT); gates baseline from gstack health (MIT)
+  audit: orchestration.md generalised from the owner's own project audit skills (ours; no project facts carried over)
+  backup-drill: restore-drill method and the never-restore-over-production guard written from scratch; no adapted text
+  business: premise challenge, minimal/ideal/lateral alternatives and expand/selective/hold/reduce postures adapted from gstack plan-ceo-review and office-hours (MIT), reworded
+  business: research rules, report structure, market-research sections, feature-gap labels, RICE ranking and business-model comparison adapted from the generic method of internal LLL business skills (ours; method only, no product facts)
+  business: six forcing questions, operating principles, pushback patterns and stage routing adapted from gstack office-hours / gstack-office-hours phase 2A (MIT), reworded
+  cloudflare: references/build-agent-and-mcp.md adapted from the Cloudflare plugin commands build-agent.md and build-mcp.md (cloudflare/skills, Apache-2.0)
+  cloudflare: references/docs-and-mcp.md retrieval-first rule, nodejs_compat note, error-code note and MCP server list adapted from the Cloudflare plugin rules/workers.mdc and .mcp.json (cloudflare/skills, Apache-2.0)
+  docs: coverage map and Diataxis-style lens, plus the never-clobber-changelog and ask-before-version-bump rules, adapted from gstack document-release and document-generate (MIT)
+  docs: docs-and-memory sync method from an internal LLL audit skill (ours; generic method only, no repo facts)
+  handover: Context7 documentation lookup step (current docs for tool versions and support dates) adapted from ECC documentation-lookup (MIT)
+  handover: deploy strategies (rolling, blue-green, canary), rollback checklist, production-readiness checklist structure, health-check and fail-fast config validation guidance adapted from ECC deployment-patterns (MIT)
+  handover: ownership, payment-gate, bug-window and handover topics read from company/docs/lll-client-playbook.html (ours, read only); the skill tells the model to read terms at runtime and copies none
+  launch: canary alert rules, baseline capture and two-consecutive-rounds confirmation, and the verify-the-deploy-by-revision idea adapted from gstack canary and land-and-deploy (MIT)
+  launch: post-launch audit checklist structure adapted from company post-launch skill (ours; generic method only, no names or business facts)
+  lll:design-system: adapted ideas from the Apache-2.0 impeccable skill (theming, extract, tokens, voice) and the gstack design-consultation and design-shotgun skills (consultation and variants flow, inspiration only); rewritten and stack-neutral.
+  lll:design-system: OKLab matrix constants are the published Bjorn Ottosson values; WCAG 2.2 contrast formula is from the W3C specification.
+  lll:logo: adapted the method of the logo-design skill (brief, concept scoring, black-first SVG, optical refinement, testing, delivery) in condensed form. The 1,400-logo library and its scripts are not included.
+  lll:logo: iOS, Android adaptive icon (108 dp, 66 dp safe circle) and maskable (80 percent circle) sizes follow public platform documentation.
+  lll:ui: adapted ideas from the ui-ux skill (no top-level licence found: inspiration only, no text copied) and the Apache-2.0 impeccable and frontend-design skills (rule sets for hierarchy, states, motion values, slop tells, review structure); rewritten and condensed, stack-neutral.
+  lll:ui: gstack design skills (design-review, ios-design-review, design-html, design-motion) used as inspiration only; no text copied.
+  lll:ui: Nielsen ten heuristics and the cognitive-law table are common professional knowledge, restated in original wording.
+  mobile: references/device-testing.md evidence tiers, synthetic-input limits, debug-only instrumentation rules and the 10-point screen rubric adapted from gstack ios-qa and ios-design-review (MIT)
+  mobile: references/device-testing.md reproduce-before-fix rule in the QA loop adapted from gstack ios-fix (MIT)
+  mobile: references/ios-native.md debug-only instrumentation guidance adapted from gstack ios-clean (MIT)
+  onboard: Context7 lookup procedure (resolve-library-id then query-docs, three-call limit, redact secrets) adapted from ECC documentation-lookup (MIT)
+  onboard: graphify usage (CLI command names only: query, path, explain, update) from ~/.claude/skills/graphify (INSPIRATION ONLY; no text copied)
+  onboard: own-code vs third-party vs build-artifact file classification idea taken from ECC repo-scan pointer (MIT, idea only; no text or code copied)
+  onboard: persona-to-depth table, SMIG writing rule, step types, narrative shape and the CodeTour `ref` field guidance adapted from ECC code-tour (MIT)
+  onboard: recon steps (manifest, framework, entry point, config and test detection), request-lifecycle tracing, convention detection, 'where to look' table, starter CLAUDE.md size limit and anti-patterns adapted from ECC codebase-onboarding (MIT)
+  onboard: six impact questions, recovery gate and post-change alignment adapted from ECC change-impact (MIT)
+  onboard: slice-first perimeter, four-axis gap register (thinking, practice, missing features, technology selection), git archaeology, reconstructed-decision marking and fix-forward/rewrite/leave-documented verdicts adapted from ECC brownfield-retrospective (MIT)
+  pack: description-states-triggers-not-workflow principle and baseline-before-writing idea adapted from superpowers writing-skills (MIT)
+  pricing: ~/.claude/skills/pricing-strategy read as INSPIRATION ONLY; no sentence, table or asset copied
+  pricing: competitor-price research method and report structure adapted from internal LLL business skills (ours; method only, no product facts)
+  pricing: cost-inventory method, three-scale modelling and cost-lever ranking adapted from an internal LLL business skill (ours; method only, no product facts)
+  research: references/browser-qa.md quick/standard/diff-aware/regression pass structure adapted from gstack qa (MIT)
+  research: references/scraping.md look-then-extract method, 3-4 attempt budget, stable JSON output and untrusted-page-content rule adapted from gstack scrape (MIT)
+  scope: idea of a reviewable page for plan approval (offer a private page for owner review) taken from ECC plan-canvas (MIT, idea only; no code or text copied)
+  scope: plan-mutation operations (split, insert, skip, reorder, abandon) with audit trail, self-contained milestone briefs and adversarial review gate adapted from ECC blueprint (MIT)
+  scope: tone, process and payment/revision/ownership topics read from company/docs/lll-client-playbook.html (ours, read only); no text or figures copied into the skill
+  security: caveman verify-and-stop used as inspiration only; no text copied
+  security: engine wrapper, modes and verdict/severity mapping built around the vendored Cloudflare security-audit-skill engine (MIT)
+  security: framework-notes adapted from ECC django-security, laravel-security, springboot-security and quarkus-security (MIT)
+  security: quick-checklist items adapted from ECC security-review, security-scan and security-bounty-hunter (MIT)
+  security: quick-checklist secrets-archaeology, CI/supply-chain and OWASP API/LLM sections adapted from gstack cso (MIT)
+  seo: audit orchestration, per-area specialist split, scoring model and report structure adapted from claude-seo seo-audit and its 18 agents (MIT)
+  seo: Google Search Console / DataForSEO / geo-optimizer usage notes adapted from claude-seo seo-google and seo-dataforseo (MIT)
+  seo: SERP-overlap clustering thresholds and drift severity rules adapted from claude-seo seo-cluster and seo-drift (MIT)
+  seo: technical, content/E-E-A-T, schema, images, sitemap, hreflang, local, geo, backlinks, e-commerce, programmatic, competitor-page, cluster, content-brief, sxo, plan, page and drift checks adapted as method from the matching claude-seo skills (MIT)
+  skills/build/references/execute-inline.md, execute-subagents.md, parallel-agents.md, tdd.md: adapted from superpowers executing-plans, subagent-driven-development (implementer and reviewer prompts), dispatching-parallel-agents, test-driven-development and writing-good-tests (MIT)
+  skills/build/references/laziness-ladder.md, skills/build/SKILL.md: laziness ladder adapted from ponytail (MIT)
+  skills/debug/references/incident-mode.md, flaky-and-order-dependent.md, races-and-concurrency.md: investigate recipes for flake, polluter, race and blast radius adapted from gstack investigate (MIT)
+  skills/debug/scripts/bisect-polluter.mjs, references/flaky-and-order-dependent.md: find-polluter idea from superpowers (MIT); script is a new implementation (delta debugging)
+  skills/debug/SKILL.md, references/root-cause-tracing.md, flaky-and-order-dependent.md, defense-in-depth.md: adapted from superpowers systematic-debugging, root-cause-tracing, defense-in-depth and condition-based-waiting (MIT)
+  skills/plan/references/brainstorm.md, skills/plan/references/spec-template.md: brainstorm flow adapted from superpowers brainstorming (MIT)
+  skills/plan/references/plan-template.md, skills/plan/scripts/plan-lint.mjs: plan format adapted from superpowers writing-plans (MIT)
+  skills/plan/references/review-ceo.md, review-eng.md, review-design.md, autoplan.md, brainstorm.md: lens content adapted from gstack plan-ceo-review, plan-eng-review, plan-design-review, autoplan and office-hours (MIT)
+  skills/review/references/overengineering-pass.md: adapted from ponytail-review (MIT)
+  skills/review/references/request-review.md, receive-review.md: adapted from superpowers requesting-code-review and receiving-code-review (MIT)
+  skills/review/references/risk-checklists.md, finding-calibration.md: review checklist structure (critical and informational passes, enum completeness, sideways sweep) adapted from gstack review (MIT)
+  skills/ship/references/deploy.md, commit-and-pr.md, canary.md, scripts/canary.mjs: adapted from gstack ship, land-and-deploy and canary (MIT); script is a new implementation
+  skills/ship/references/finish-branch.md, worktrees.md: adapted from superpowers finishing-a-development-branch and using-git-worktrees (MIT)
+  skills/ship/references/verification.md: adapted from superpowers verification-before-completion (MIT)
+  tokens: honesty boundary (measured versus projected savings, never claim unmeasured numbers) idea adapted from ponytail-gain (MIT)

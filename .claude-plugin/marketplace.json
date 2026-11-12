@@ -1,0 +1,17 @@
+{
+  "name": "lll",
+  "owner": {
+    "name": "Lilly Logic Labs"
+  },
+  "plugins": [
+    {
+      "name": "lll",
+      "source": "./",
+      "description": "Lilly Logic Labs house skills for any project, stack and platform."
+    }
+  ],
+  "metadata": {
+    "description": "Lilly Logic Labs house skills.",
+    "version": "0.1.0"
+  }
+}

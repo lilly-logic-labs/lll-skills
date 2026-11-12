@@ -1,0 +1,7 @@
+# Fake values, not secrets.
+# handover selftest fixture (fake sk_live_ in a temp .env)
+4ac282e1eb510b2ca4c95181fa36b39fa3f715f6:skills/handover/scripts/env-names.mjs:stripe-access-token:202
+skills/handover/scripts/env-names.mjs:stripe-access-token:202
+# vendored Cloudflare doc, "anti-pattern" example
+dd7af8907199b2c390929510acf401c3741e0351:skills/cloudflare/vendor/workers-best-practices/references/configuration.md:generic-api-key:82
+skills/cloudflare/vendor/workers-best-practices/references/configuration.md:generic-api-key:82

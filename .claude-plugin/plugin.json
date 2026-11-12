@@ -1,0 +1,12 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "lll",
+  "version": "0.1.0",
+  "description": "Lilly Logic Labs house skills: plan, build, debug, review, ship, security and code audits, docs, token optimisation, design, SEO, marketing, client delivery and platform guides. Stack and platform neutral.",
+  "author": {
+    "name": "Lilly Logic Labs"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/lilly-logic-labs/lll-skills",
+  "homepage": "https://lillylogiclabs.com"
+}
