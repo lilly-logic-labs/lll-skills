@@ -62,6 +62,7 @@ Per-skill sources
   lll:logo: iOS, Android adaptive icon (108 dp, 66 dp safe circle) and maskable (80 percent circle) sizes follow public platform documentation.
   lll:ui: adapted ideas from the ui-ux skill (no top-level licence found: inspiration only, no text copied) and the Apache-2.0 impeccable and frontend-design skills (rule sets for hierarchy, states, motion values, slop tells, review structure); rewritten and condensed, stack-neutral.
   lll:ui: gstack design skills (design-review, ios-design-review, design-html, design-motion) used as inspiration only; no text copied.
+  lll:ui: references/libraries.md job-to-library picks and 'common mismatches' adapted from Emil Kowalski pick-ui-library (github.com/emilkowalski/skills @ 0f2e23b, MIT); kit categories and one-standout rule from Griffin Wooldridge's video 'UI Libraries for Claude Code', and accent-on-actions, 1 px edge, layered-shadow and fix-content-pass notes from his seven-principles video (ideas only)
   lll:ui: Nielsen ten heuristics and the cognitive-law table are common professional knowledge, restated in original wording.
   mobile: references/device-testing.md evidence tiers, synthetic-input limits, debug-only instrumentation rules and the 10-point screen rubric adapted from gstack ios-qa and ios-design-review (MIT)
   mobile: references/device-testing.md reproduce-before-fix rule in the QA loop adapted from gstack ios-fix (MIT)

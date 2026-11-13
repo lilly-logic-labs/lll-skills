@@ -12,7 +12,7 @@ One procedure for reviewing a UI (read-only) and for polishing one (editing). Re
 ## 2. Review dimensions, in order
 
 1. **Job and hierarchy.** Is the primary action obvious in two seconds? Squint test, trunk test, mindless-click test.
-2. **Layout and spacing.** Scale respected, grouping by proximity, alignment edges, max widths, containers earn their place.
+2. **Layout and spacing.** Scale respected, grouping by proximity, alignment edges, max widths, containers earn their place, optical details (icon centring, text baseline in buttons, nested radii, hanging punctuation; section 6).
 3. **Type.** Scale steps, line length, truncation, tabular numbers, scaling with text size.
 4. **Colour and contrast.** Role tokens, measured ratios in every theme and state, not colour alone.
 5. **States.** The matrix for this screen: loading, empty, error, success, offline, partial, long content. Buttons: hover, focus, pressed, loading, disabled.
@@ -104,11 +104,12 @@ Order of operations (stop when it is good enough):
 2. **Reduce.** Shadow strength, radius variety, colours, type sizes, motion durations.
 3. **Fix values.** Move raw values onto tokens; correct easing, damping, opacity, tracking.
 4. **Fix structure.** Hierarchy, grouping, alignment edges, spacing rhythm.
-5. **Fix states.** Add the missing ones; make existing ones consistent.
-6. **Fix origin and path.** Motion starts where the thing came from and returns there; make it interruptible.
-7. **Accessibility.** Names, focus, contrast, targets, reduced motion.
-8. **Detail.** Optical alignment and rhythm (below).
-9. **Clean up.** Remove debug output, dead styles, unused imports; replace one-offs with shared components; promote real repeats to tokens (not single exceptions).
+5. **Fix content.** Replace placeholder names, round numbers and lorem with realistic, varied sample data; generic content makes a good layout look like a template.
+6. **Fix states.** Add the missing ones; make existing ones consistent.
+7. **Fix origin and path.** Motion starts where the thing came from and returns there; make it interruptible.
+8. **Accessibility.** Names, focus, contrast, targets, reduced motion.
+9. **Detail.** Optical alignment and rhythm (below).
+10. **Clean up.** Remove debug output, dead styles, unused imports; replace one-offs with shared components; promote real repeats to tokens (not single exceptions).
 
 ### Optical details
 
@@ -119,6 +120,8 @@ The eye weighs; it does not measure. Nudge by eye, then record the nudge as a to
 - Nested corners: inner radius = outer radius minus padding. Large surfaces use continuous (superellipse) corners where the platform offers them.
 - Space above a heading is 1.5 to 2 times the space below; card top padding 1 to 2 pt more than the sides.
 - Hairlines: 0.5 pt on light glass, 1 pt on dark; thin lines look thinner on dark and small sizes.
+- Edges: a 1 px border a step darker than the surface (or a low-alpha one) defines a card better than a heavy shadow.
+- Shadows that float: two layers, a tight low-blur contact shadow plus a wide, faint ambient one, both tinted toward the background hue. One elevation scale, not a new shadow per component.
 - Quotes, bullets and list numbers hang outside the text column; rows with and without leading icons share one text start.
 - Compare at 1x and 3x; flip the screenshot horizontally; blur it. Misalignments hidden by reading order show up.
 

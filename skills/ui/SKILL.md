@@ -67,7 +67,7 @@ Build plus review requested: build, then review your own result as a fresh reade
 
 ## Steps
 
-1. **Learn the project.** Run the detection in `../../shared/stack-detect.md`. Then find: design docs, token files (`tailwind.config`, `theme.ts`, CSS variables, `Theme.kt`, asset catalogs), the component folder, the icon set, the i18n files, and two screens next to the target that already look right. Note the UI library (shadcn, MUI, Radix, Chakra, Material, SwiftUI native, Flutter Material).
+1. **Learn the project.** Run the detection in `../../shared/stack-detect.md`. Then find: design docs, token files (`tailwind.config`, `theme.ts`, CSS variables, `Theme.kt`, asset catalogs), the component folder, the icon set, the i18n files, and two screens next to the target that already look right. Note the UI library (shadcn, Base UI, MUI, Radix, Chakra, Material, SwiftUI native, Flutter Material). Before hand-building a primitive, toast, drawer, command menu, chart or animated number, pick a library per `references/libraries.md` and name it in the plan.
 2. **Pin the job.** One line each: who uses this, what they want done, the one primary action, where they came from and go next. The code and README usually answer it. If they do not, decide, state the assumption in one line, and continue.
 3. **Classify the surface**, per section when mixed:
    - **Do** (app UI, dashboards, settings, editors): scanning speed, consistency and platform idiom beat expression. Brand lives in details.
@@ -82,6 +82,7 @@ Build plus review requested: build, then review your own result as a fresh reade
    4. States and edge content (long, empty, missing, localised).
    5. Interaction, focus and motion.
    6. Responsive and platform fit.
+   7. Optical details: icon centring, button text baseline, nested radii, heading spacing, hairlines (`references/review-and-polish.md`, Optical details).
 6. **Look at it.** Run the app and capture it. Web: 375, 768, 1024 and 1440 px wide, light and dark, keyboard only, reduced motion on. Mobile: smallest and largest shipped device, large text size, dark mode, offline. Tools: the `run` skill, `anthropic-skills:built-in-browser` or `chrome-browser`; deeper browser QA is `lll:research`. If nothing can run, say what is unverified. Detail: `references/calibrate-and-verify.md`.
 7. **Scan.** `node scripts/ui-scan.mjs <paths>` lists mechanical anti-patterns with `path:line` (web CSS and markup, SwiftUI, Compose). Treat each hit as a lead: confirm in context or discard. Run `node scripts/ui-scan.mjs --selftest` only when changing the script.
 8. **Close out.** Run the project's lint, typecheck and tests (gates from step 1). Then `/simplify` for code cleanliness if you wrote a lot, and `/code-review` when the change touches logic. Report per Output.
@@ -117,6 +118,7 @@ Detail and fixes: `references/slop.md`. The brief's own words can earn any of th
 - Frosted glass as the default surface, not as chrome.
 - Happy path only: no empty, loading, error or long-content design.
 - A modal for something that needs neither interruption nor focus trap.
+- A kit left at its defaults; more than one showy copy-in effect per page; hand-rolled toasts, drawers or command menus.
 
 ## Output
 

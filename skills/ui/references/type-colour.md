@@ -33,6 +33,7 @@ How to set and check text, colour, contrast and theming while building or review
 Define colour by role: background, surface, surface-raised, border, text, text-muted, accent (primary action), accent-on (text on accent), and the semantic four (success, warning, danger, info). Use the role tokens in components, never raw hex.
 
 - One accent colour does the work. A second accent needs a job (data series, a brand moment).
+- Neutrals carry most of the screen. Spend the accent only on what the user should act on (primary button, links, selection, focus); an accent on headings, icons and backgrounds as well stops pointing anywhere.
 - Neutrals lean slightly toward the brand hue. Do not mix warm and cool greys.
 - Secondary text on a coloured surface takes a tint of that surface's hue, not a neutral grey.
 - Semantic colours keep one meaning everywhere: red is danger, not "sale".

@@ -8,7 +8,7 @@ Applies to React, Vue, Svelte, Angular, Solid, Astro and plain HTML. Frameworks 
 - Landmarks on every page: one `<main>`, `<header>`, `<nav>` (labelled when more than one), `<footer>`. A "Skip to content" link first in tab order.
 - Headings form an outline with no skipped levels; one `<h1>`. Choose the level by structure, style it with CSS.
 - ARIA only fills gaps native HTML cannot: `aria-expanded`, `aria-controls`, `aria-current`, `aria-live`, `aria-invalid`, `aria-describedby`. The first rule of ARIA is to not need it.
-- Do not hand-roll comboboxes, menus, dialogs, tabs, date pickers or tooltips. Use the platform (`<dialog>`, `popover` attribute, `<details name>`) or an accessible primitive library (Radix, React Aria, Headless UI, Ark, Melt, Zag).
+- Do not hand-roll comboboxes, menus, dialogs, tabs, date pickers or tooltips. Use the platform (`<dialog>`, `popover` attribute, `<details name>`) or an accessible primitive library (Base UI, Radix, React Aria, Headless UI, Ark, Melt, Zag). Toasts, drawers, command menus, OTP inputs and animated numbers have specialist libraries too: `libraries.md`.
 - Links navigate, buttons act. A button that navigates, or a link that submits, is wrong.
 - Images: meaningful ones have specific `alt`; decorative ones `alt=""`; icon-only buttons have an accessible name (`aria-label`).
 
@@ -43,7 +43,7 @@ Applies to React, Vue, Svelte, Angular, Solid, Astro and plain HTML. Frameworks 
 - **CSS modules / vanilla-extract / styled-components.** Keep tokens in CSS custom properties so themes switch without re-render.
 - **React.** State of the UI as a union, not booleans. Keys on lists. Suspense and error boundaries give loading and error states by construction. Server components: stream the shell, then the data.
 - **Vue / Svelte / Angular.** Same rules: keyboard-reachable controls, `v-model` or bindings do not replace validation messages, transitions use `prefers-reduced-motion`.
-- **Component kits** (shadcn/ui, MUI, Chakra, Mantine, Ant): theme them to the project's tokens; do not fork three button variants in feature code. Match the kit's density and radius to the brand or you get "default kit" look.
+- **Component kits** (shadcn/ui, MUI, Chakra, Mantine, Ant): theme them to the project's tokens; do not fork three button variants in feature code. Match the kit's density and radius to the brand or you get "default kit" look. Prefer kits that install by CLI or registry, so the source is in the repo and editable.
 - **Icons:** one set, one stroke weight, one size grid (16, 20, 24). SVG, `currentColor`. No emoji as icons.
 - **Images:** `width` and `height` or `aspect-ratio`, `loading="lazy"` below the fold, `fetchpriority="high"` on the LCP image, AVIF or WebP with `srcset`/`sizes`, `decoding="async"`.
 

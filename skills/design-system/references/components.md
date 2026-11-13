@@ -61,7 +61,7 @@ Add component-specific states: selected, expanded, checked, indeterminate, dragg
 
 | Situation | Do |
 |---|---|
-| Need accessible behaviour (dialog, menu, combobox, tabs, date picker) | adopt a headless primitive library (Radix, React Aria, Headless UI, Zag) or the platform component; style with tokens |
+| Need accessible behaviour (dialog, menu, combobox, tabs, date picker) | adopt a headless primitive library (Base UI, Radix, React Aria, Headless UI, Zag; specialist picks in `../../ui/references/libraries.md`) or the platform component; style with tokens |
 | Need a full kit fast | a styled kit (shadcn/ui, MUI, Chakra, Mantine, Material 3, SwiftUI native) themed to tokens; pin the density and radius to your brand |
 | Brand-defining component (hero, signature chart) | build custom, once, well |
 | Native apps | platform components first; custom only where the brand needs it and a11y is preserved |

@@ -32,6 +32,8 @@ Method: name the tell, name the element, give the replacement. Do not rewrite a 
 | Sparklines, rings and fake avatars filling space | Real data or an honest empty state |
 | Stock-photo hero or grey placeholder box | Product screenshot, real photography, or nothing |
 | Generated SVG doodles and mascots | Commissioned or licensed art direction, or none |
+| A component kit at its defaults (stock shadcn/ui greys, radius, Inter, card) | Theme radius, type, colour and density to the project's tokens |
+| Several copy-in effects (Magic UI, Aceternity and the like) on one page | One standout per page, themed to tokens, with a reduced-motion variant (`libraries.md`) |
 
 ## 3. Type and colour
 
@@ -69,6 +71,7 @@ Method: name the tell, name the element, give the replacement. Do not rewrite a 
 | Same fade-and-slide-up on every section; hover lift on every card | One authored motion moment; motion that answers an action |
 | Bounce and overshoot everywhere | Critically damped by default |
 | Toasts for errors that need action | Inline message with the action |
+| Hand-built toasts, drawers, command menus or number tickers | The specialist library (`libraries.md`); they carry stacking, swipe, focus and reduced-motion details |
 | Disabled buttons with no explanation | Explain, or enable with validation |
 | Placeholder-as-label, hover-only affordances | Visible labels; visible controls |
 | Hamburger on phone hiding the main destinations | Visible primary navigation |
